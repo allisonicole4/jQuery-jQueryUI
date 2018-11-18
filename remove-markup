@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>detach demo</title>
+  <style>
+  p {
+    background: lightblue;
+    margin: 6px 0;
+  }
+  p.off {
+    background:lightcoral;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+ 
+<p>iPhone 100x Releases Today</p>Written and edited by Allison L. 
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<button>Attach/detach paragraphs</button>
+ 
+<script>
+$( "p" ).click(function() {
+  $( this ).toggleClass( "off" );
+});
+var p;
+$( "button" ).click(function() {
+  if ( p ) {
+    p.appendTo( "body" );
+    p = null;
+  } else {
+    p = $( "p" ).detach();
+  }
+});
+</script>
+ 
+</body>
+</html>
