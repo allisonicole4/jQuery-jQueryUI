@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>first-child demo</title>
+  <style>
+  span {
+    color: lightpink;
+  }
+  span.sogreen {
+    color:black;
+    font-weight: bolder;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+ 
+<div>
+  <span>Red,</span>
+  <span>White,</span>
+  <span>Blue</span>
+</div>
+<div>
+  <span>Shirt,</span>
+  <span>Pants,</span>
+  <span>Jacket</span>
+</div>
+<div>
+    <span>Spring,</span>
+    <span>Winter,</span>
+    <span>Fall,</span>
+    <span>Summer</span>
+  </div>
+   
+ 
+<script>
+$( "div span:first-child" )
+  .css( "text-decoration", "underline" )
+  .hover(function() {
+    $( this ).addClass( "sogreen" );
+  }, function() {
+    $( this ).removeClass( "sogreen" );
+  });
+</script>
+ 
+</body>
+</html>
