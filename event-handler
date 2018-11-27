@@ -1,0 +1,30 @@
+<!DOCTYPE html>  
+  <html>  
+   <head>  
+ <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+     <script> 
+   $(document).ready(function(){
+     $(document).ajaxComplete(function(){  // triggered when the request completes for form
+     alert("Newsletter Coming Your Way!");
+  });
+     
+  $("button").click(function(){
+    $("div").load("demoAjax.php");
+  });
+});
+ 
+   </script>
+   <style>
+     body{font-family:Verdana; color:#444;}
+     div{border:5px solid lightgray;padding:10px;}
+   </style>
+ </head>  
+      <body>
+        <h2>Sign Up with E-Mail</h2>
+        
+        <p>Get Newsletters Every Week</p>
+       <span id="img"></span>
+        <div></div>
+        <button>Submit</button>
+       </body>
+</html>
